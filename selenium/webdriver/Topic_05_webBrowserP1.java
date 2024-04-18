@@ -6,6 +6,7 @@ import static org.testng.Assert.assertTrue;
 
 import java.awt.Checkbox;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import javax.swing.text.DefaultEditorKit.CopyAction;
@@ -21,13 +22,14 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.zeromq.ZStar;
 
-import com.gargoylesoftware.htmlunit.javascript.host.Set;
-import com.gargoylesoftware.htmlunit.javascript.host.Window;
-import com.gargoylesoftware.htmlunit.javascript.host.html.Option;
-import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
-
-import okio.Timeout;
+//import com.gargoylesoftware.htmlunit.javascript.host.Set;
+//import com.gargoylesoftware.htmlunit.javascript.host.Window;
+//import com.gargoylesoftware.htmlunit.javascript.host.html.Option;
+//import com.gargoylesoftware.htmlunit.javascript.host.media.webkitMediaStream;
+//
+//import okio.Timeout;
 
 
 public class Topic_05_webBrowserP1 {
@@ -118,11 +120,11 @@ public class Topic_05_webBrowserP1 {
 		String loginwindowid = driver.getWindowHandle(); //**
 		// lấy ra id tất cả
 		Set allIds = (Set) driver.getWindowHandles(); //*
-		
-		
-		
-		
-	// trả về kiểu option	
+
+
+
+
+	// trả về kiểu option
 		// cookie/cache
 		Options opt = driver.manage();
 		// login thành công -> lưu lại
@@ -143,27 +145,27 @@ public class Topic_05_webBrowserP1 {
 		// khoảng thời gian chờ script đc thưc thi xong trong vòng bao nhiêu giây
 		time.setScriptTimeout(5, TimeUnit.SECONDS);
 
-		Window win = opt.window();
-		win.fullcreen();
-		win.maximize(); //**
-		
-		// test FUI: functional
-		// test GUI: font/size/color/position...
-		win.getPosition();//**
-		win.getsize(); //**
-		
-		
-		
-		
-		// navigation
-		Navigation nav =	driver.navigate();
-		nav.back();
-		nav.refresh();
-		nav.forward();
-		
-		nav.to("/www.youtube.com/watch?v=9S7_ODHZmQ8&t=3036s");
-		driver.get("/www.youtube.com/watch?v=9S7_ODHZmQ8&t=3036s");
-		
+//		Window win = opt.window();
+//		win.fullcreen();
+//		win.maximize(); //**
+//
+//		// test FUI: functional
+//		// test GUI: font/size/color/position...
+//		win.getPosition();//**
+//		win.getsize(); //**
+//
+//
+//
+//
+//		// navigation
+//		Navigation nav =	driver.navigate();
+//		nav.back();
+////		nav.refresh();
+//		nav.forward();
+//
+//		nav.to("/www.youtube.com/watch?v=9S7_ODHZmQ8&t=3036s");
+//		driver.get("/www.youtube.com/watch?v=9S7_ODHZmQ8&t=3036s");
+//
 		
 		
 		// switchTo

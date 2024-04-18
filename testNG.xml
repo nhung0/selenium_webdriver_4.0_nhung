@@ -1,0 +1,61 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="selenium_webdriver_4.0_nhung" verbose="1"  parallel="methods" thread-count="2">
+<!--    chạy firefox và chrome cùng 1 lúc trc xong rồi mới chạy edge-->
+<!--    // global-->
+<!--    <parameter name="environment" value="dev"></parameter>-->
+<!--   <parameter name="environment" value="testing"></parameter>-->
+<!--    <parameter name="environment" value="staying"></parameter>-->
+<!--    <parameter name="environment" value="live"></parameter>-->
+
+
+<!--    <test name="run on firefox ">-->
+<!--&lt;!&ndash;        //local&ndash;&gt;-->
+<!--        <parameter name="browser" value="firefox"></parameter>-->
+<!--        <parameter name="version" value="123"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testNG.topic_09_parameter"></class>-->
+<!--        </classes>-->
+
+<!--    </test>-->
+
+
+<!--    <test name="run on chrome">-->
+<!--        <parameter name="browser" value="chrome"></parameter>-->
+<!--        <parameter name="version" value="131"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="testNG.topic_09_parameter"></class>-->
+<!--        </classes>-->
+
+<!--    </test>-->
+
+    <test name="run on firefox">
+<!--        <parameter name="browser" value="edge"></parameter>-->
+<!--        <parameter name="version" value="123"></parameter>-->
+        <classes>
+            <class name="testNG.topic_11_pararell_method"></class>
+        </classes>
+
+    </test>
+
+    <listeners >
+        <listener class-name="listener.extentReport"></listener>
+    </listeners>
+        <test name="run on chrome">
+            <parameter name="browser" value="chrome"></parameter>
+            <parameter name="version" value="131"></parameter>
+            <classes>
+                <class name="testNG.topic_09_parameter"></class>
+            </classes>
+
+        </test>
+
+</suite>
+
+
+
+
+
+
+
+<!--packages, all class, multiple suite; preserve order: true để chạy test theo thứ tựu trong file xml topic 04 testng, còn bằng false chạy theo testcase bên navbar->
